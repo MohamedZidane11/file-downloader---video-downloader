@@ -19,8 +19,31 @@ class MainApp(QMainWindow , ui):
         super(MainApp , self).__init__(parent)
         QMainWindow.__init__(self)
         self.setupUi(self)
+        # program functions calling
+        self.hand_ui()
+        self.hand_buttons()
+
+    # ---- ui editing function -----
+    def hand_ui(self):
+        self.setWindowTitle('PyQT Downloader')
+        self.setFixedSize(800,600)
 
 
+    # ----- file downloader main functions -----
+    def hand_buttons(self):
+        pass
+
+
+    def hand_browse(self):
+        pass
+
+
+    def hand_progressBar(self):
+        pass
+
+
+    def download(self):
+        pass
 
 
 
