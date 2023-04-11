@@ -34,10 +34,13 @@ class MainApp(QMainWindow , ui):
     # ----- file downloader main functions -----
     def hand_buttons(self):
         self.pushButton.clicked.connect(self.download)
+        self.pushButton_2.clicked.connect(self.hand_browse)
 
 
     def hand_browse(self):
-        pass
+        save_place = QFileDialog.getSaveFileName(self, caption='Save As', directory='.', filter='All Files (*.*)')
+        browse = str(save_place).split(',')[0][2:-1]
+        self.lineEdit_2.setText(browse)
 
 
     def hand_progress(self, blocknum, blocksize, totalsize):
