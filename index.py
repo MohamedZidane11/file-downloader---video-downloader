@@ -41,7 +41,12 @@ class MainApp(QMainWindow , ui):
 
 
     def hand_progress(self, blocknum, blocksize, totalsize):
-        pass
+        read = blocknum * blocksize
+        if totalsize > 0:
+            percent = read * 100 / totalsize
+            self.progressBar.setValue(percent)
+            # Threading solution for not responding
+            QApplication.processEvents()
 
 
 
