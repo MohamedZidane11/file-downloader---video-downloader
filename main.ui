@@ -1345,7 +1345,7 @@ QDateEdit::down-arrow:focus
      <string>Save Location</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_3">
+   <widget class="QLineEdit" name="lineEdit_1">
     <property name="geometry">
      <rect>
       <x>160</x>
@@ -1365,7 +1365,7 @@ QDateEdit::down-arrow:focus
      </rect>
     </property>
     <property name="value">
-     <number>24</number>
+     <number>0</number>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton">

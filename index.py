@@ -1,4 +1,6 @@
 # import PyQt5 Library
+import urllib.request
+
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
@@ -31,19 +33,34 @@ class MainApp(QMainWindow , ui):
 
     # ----- file downloader main functions -----
     def hand_buttons(self):
-        pass
+        self.pushButton.clicked.connect(self.download)
 
 
     def hand_browse(self):
         pass
 
 
-    def hand_progressBar(self):
+    def hand_progress(self, blocknum, blocksize, totalsize):
         pass
+
 
 
     def download(self):
-        pass
+        # url - save location - progress
+        url = self.lineEdit_1.text()
+        save_location = self.lineEdit_2.text()
+        #progress = ''
+
+        try:
+            urllib.request.urlretrieve(url, save_location, self.hand_progress)
+        except Exception:
+            QMessageBox.warning(self, 'Download Error', 'Download Failed :(')
+            return
+        QMessageBox.information(self, 'Download Completed', 'Download Finished :)')
+        self.progressBar.setValue(0)
+        self.lineEdit_1.setText('')
+        self.lineEdit_2.setText('')
+
 
 
 
