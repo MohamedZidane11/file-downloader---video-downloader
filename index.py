@@ -38,9 +38,10 @@ class MainApp(QMainWindow , ui):
 
     # ----- file downloader main functions -----
     def hand_buttons(self):
-        self.pushButton.clicked.connect(self.download)
+        self.pushButton.clicked.connect(self.download_files)
         self.pushButton_2.clicked.connect(self.hand_browse)
-        self.pushButton_3.clicked.connect(self.youtube_video_download)
+        self.pushButton_3.clicked.connect(self.video_download)
+        self.pushButton_7.clicked.connect(self.video_info)
 
 
     def hand_browse(self):
@@ -59,7 +60,7 @@ class MainApp(QMainWindow , ui):
 
 
 
-    def download(self):
+    def download_files(self):
         # url - save location - progress
         url = self.lineEdit_1.text()
         save_location = self.lineEdit_2.text()
@@ -76,8 +77,7 @@ class MainApp(QMainWindow , ui):
         self.lineEdit_2.setText('')
 
     # ----- youtube downloader main functions -----
-    def youtube_video_download(self):
-
+    def video_info(self):
         link = self.lineEdit_4.text()
         v = pafy.new(f"{link}")
         all_streams = v.allstreams
@@ -103,6 +103,12 @@ class MainApp(QMainWindow , ui):
             # print(s.mediatype, s.extension, s.quality, s.resolution, size)
 
 
+    def video_download(self):
+        link = self.lineEdit_4.text()
+        v = pafy.new(f"{link}")
+        all_streams = v.allstreams
+        vid_quality = ''
+        vid_down = ''
 
 
 def main():
