@@ -1305,7 +1305,7 @@ QDateEdit::down-arrow:focus
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="tab_3">
      <attribute name="title">
@@ -1550,7 +1550,7 @@ QDateEdit::down-arrow:focus
        <rect>
         <x>170</x>
         <y>120</y>
-        <width>521</width>
+        <width>441</width>
         <height>41</height>
        </rect>
       </property>
@@ -1611,15 +1611,35 @@ QDateEdit::down-arrow:focus
      <widget class="QComboBox" name="comboBox">
       <property name="geometry">
        <rect>
-        <x>180</x>
+        <x>170</x>
         <y>250</y>
-        <width>121</width>
+        <width>251</width>
         <height>41</height>
        </rect>
       </property>
      </widget>
+     <widget class="QPushButton" name="pushButton_7">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>120</y>
+        <width>75</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Analyse</string>
+      </property>
+     </widget>
     </widget>
-    <widget class="QWidget" name="">
+    <widget class="QWidget" name="widget">
      <attribute name="title">
       <string>Youtube Playlist Downloader</string>
      </attribute>
@@ -1651,7 +1671,7 @@ QDateEdit::down-arrow:focus
        <rect>
         <x>170</x>
         <y>120</y>
-        <width>521</width>
+        <width>441</width>
         <height>41</height>
        </rect>
       </property>
@@ -1712,9 +1732,9 @@ QDateEdit::down-arrow:focus
      <widget class="QLabel" name="label_9">
       <property name="geometry">
        <rect>
-        <x>40</x>
+        <x>30</x>
         <y>250</y>
-        <width>121</width>
+        <width>131</width>
         <height>31</height>
        </rect>
       </property>
@@ -1732,9 +1752,9 @@ QDateEdit::down-arrow:focus
      <widget class="QComboBox" name="comboBox_2">
       <property name="geometry">
        <rect>
-        <x>180</x>
+        <x>170</x>
         <y>250</y>
-        <width>121</width>
+        <width>251</width>
         <height>41</height>
        </rect>
       </property>
@@ -1772,9 +1792,9 @@ QDateEdit::down-arrow:focus
      <widget class="QLabel" name="label_11">
       <property name="geometry">
        <rect>
-        <x>20</x>
+        <x>10</x>
         <y>120</y>
-        <width>131</width>
+        <width>151</width>
         <height>31</height>
        </rect>
       </property>
@@ -1787,6 +1807,26 @@ QDateEdit::down-arrow:focus
       </property>
       <property name="text">
        <string>Enter Playlist URL</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_8">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>120</y>
+        <width>75</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Analyse</string>
       </property>
      </widget>
     </widget>

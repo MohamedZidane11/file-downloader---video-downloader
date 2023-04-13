@@ -11,6 +11,11 @@ import sys
 import os
 from os import path
 
+#import ytube library
+import pafy
+from humanize import naturalsize
+
+
 # import Ui File
 ui,_ = loadUiType('main.ui')
 
@@ -35,6 +40,7 @@ class MainApp(QMainWindow , ui):
     def hand_buttons(self):
         self.pushButton.clicked.connect(self.download)
         self.pushButton_2.clicked.connect(self.hand_browse)
+        self.pushButton_3.clicked.connect(self.youtube_video_download)
 
 
     def hand_browse(self):
@@ -68,6 +74,33 @@ class MainApp(QMainWindow , ui):
         self.progressBar.setValue(0)
         self.lineEdit_1.setText('')
         self.lineEdit_2.setText('')
+
+    # ----- youtube downloader main functions -----
+    def youtube_video_download(self):
+
+        link = self.lineEdit_4.text()
+        v = pafy.new(f"{link}")
+        all_streams = v.allstreams
+        # print(v.title)
+        # print(v.duration)
+        # print(v.rating)
+        # print("==============")
+        # print(v.getbest().get_filesize())
+        # print("==============")
+        # print(v.author)
+        # print(v.length)
+        # # print(v.keywords)
+        # print(v.thumb)
+        # print(v.videoid)
+        # print(v.viewcount)
+        # print("==============")
+        # print(v.allstreams)
+
+        for s in all_streams:
+            size = naturalsize(s.get_filesize())
+            videos_data = '{} {} {} {}'.format(s.mediatype, s.extension, s.quality, s.resolution, size)
+            self.comboBox.addItem(videos_data)
+            # print(s.mediatype, s.extension, s.quality, s.resolution, size)
 
 
 
